@@ -1,0 +1,3902 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-25T16:39:21.149643Z",
+  "seed": 42,
+  "cases": [
+    {
+      "case_id": "case_0001",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0001_2824",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T08:54:58Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0001_13278",
+          "order_id": "order_0001_2824",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T08:54:58Z",
+          "captured_at": "2026-08-01T08:55:04Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 1
+      }
+    },
+    {
+      "case_id": "case_0002",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0002_2679",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T03:09:55Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0002_98696",
+          "order_id": "order_0002_2679",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T03:09:55Z",
+          "captured_at": "2026-08-01T03:09:58Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 2
+      }
+    },
+    {
+      "case_id": "case_0003",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0003_1488",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T08:28:15Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0003_22280",
+          "order_id": "order_0003_1488",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T08:28:15Z",
+          "captured_at": "2026-08-01T08:28:34Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 3
+      }
+    },
+    {
+      "case_id": "case_0004",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0004_4257",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T15:16:27Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0004_95181",
+          "order_id": "order_0004_4257",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T15:16:27Z",
+          "captured_at": "2026-08-01T15:16:43Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 4
+      }
+    },
+    {
+      "case_id": "case_0005",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0005_5557",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T15:23:12Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0005_10851",
+          "order_id": "order_0005_5557",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T15:23:12Z",
+          "captured_at": "2026-08-01T15:23:22Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 5
+      }
+    },
+    {
+      "case_id": "case_0006",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0006_3547",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T03:43:16Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0006_38221",
+          "order_id": "order_0006_3547",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T03:43:16Z",
+          "captured_at": "2026-08-01T03:43:30Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 6
+      }
+    },
+    {
+      "case_id": "case_0007",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0007_2584",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T21:58:51Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0007_57052",
+          "order_id": "order_0007_2584",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T21:58:51Z",
+          "captured_at": "2026-08-01T21:59:18Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 7
+      }
+    },
+    {
+      "case_id": "case_0008",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0008_1711",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T04:32:41Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0008_70217",
+          "order_id": "order_0008_1711",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T04:32:41Z",
+          "captured_at": "2026-08-01T04:32:45Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 8
+      }
+    },
+    {
+      "case_id": "case_0009",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0009_5803",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T21:01:14Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0009_92397",
+          "order_id": "order_0009_5803",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T21:01:14Z",
+          "captured_at": "2026-08-01T21:01:38Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 9
+      }
+    },
+    {
+      "case_id": "case_0010",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0010_2139",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T10:32:10Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0010_16006",
+          "order_id": "order_0010_2139",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T10:32:10Z",
+          "captured_at": "2026-08-01T10:32:39Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 10
+      }
+    },
+    {
+      "case_id": "case_0011",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0011_4814",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T10:07:14Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0011_23238",
+          "order_id": "order_0011_4814",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T10:07:14Z",
+          "captured_at": "2026-08-01T10:07:36Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 11
+      }
+    },
+    {
+      "case_id": "case_0012",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0012_6977",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T12:56:06Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0012_31319",
+          "order_id": "order_0012_6977",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T12:56:06Z",
+          "captured_at": "2026-08-01T12:56:29Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 12
+      }
+    },
+    {
+      "case_id": "case_0013",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0013_5374",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T22:10:40Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0013_99593",
+          "order_id": "order_0013_5374",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T22:10:40Z",
+          "captured_at": "2026-08-01T22:10:59Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 13
+      }
+    },
+    {
+      "case_id": "case_0014",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0014_5010",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T13:48:55Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0014_31417",
+          "order_id": "order_0014_5010",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T13:48:55Z",
+          "captured_at": "2026-08-01T13:49:17Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 14
+      }
+    },
+    {
+      "case_id": "case_0015",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0015_4598",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T02:02:11Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0015_99733",
+          "order_id": "order_0015_4598",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T02:02:11Z",
+          "captured_at": "2026-08-01T02:02:39Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 15
+      }
+    },
+    {
+      "case_id": "case_0016",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0016_1525",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T09:44:53Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0016_51347",
+          "order_id": "order_0016_1525",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T09:44:53Z",
+          "captured_at": "2026-08-01T09:45:01Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 16
+      }
+    },
+    {
+      "case_id": "case_0017",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0017_6155",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T14:24:16Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0017_37869",
+          "order_id": "order_0017_6155",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T14:24:16Z",
+          "captured_at": "2026-08-01T14:24:22Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 17
+      }
+    },
+    {
+      "case_id": "case_0018",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0018_5339",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T20:26:19Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0018_28301",
+          "order_id": "order_0018_5339",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T20:26:19Z",
+          "captured_at": "2026-08-01T20:26:44Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 18
+      }
+    },
+    {
+      "case_id": "case_0019",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0019_8019",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T13:10:47Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0019_86484",
+          "order_id": "order_0019_8019",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T13:10:47Z",
+          "captured_at": "2026-08-01T13:10:53Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 19
+      }
+    },
+    {
+      "case_id": "case_0020",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0020_9348",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T01:42:55Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0020_74686",
+          "order_id": "order_0020_9348",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T01:42:55Z",
+          "captured_at": "2026-08-01T01:43:01Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 20
+      }
+    },
+    {
+      "case_id": "case_0021",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0021_3621",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T21:42:52Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0021_99192",
+          "order_id": "order_0021_3621",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T21:42:52Z",
+          "captured_at": "2026-08-01T21:43:06Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 21
+      }
+    },
+    {
+      "case_id": "case_0022",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0022_7252",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T19:15:52Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0022_88104",
+          "order_id": "order_0022_7252",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T19:15:52Z",
+          "captured_at": "2026-08-01T19:16:11Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 22
+      }
+    },
+    {
+      "case_id": "case_0023",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0023_1188",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T19:33:01Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0023_99166",
+          "order_id": "order_0023_1188",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T19:33:01Z",
+          "captured_at": "2026-08-01T19:33:27Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 23
+      }
+    },
+    {
+      "case_id": "case_0024",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0024_6573",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T15:49:45Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0024_24621",
+          "order_id": "order_0024_6573",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T15:49:45Z",
+          "captured_at": "2026-08-01T15:50:01Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 24
+      }
+    },
+    {
+      "case_id": "case_0025",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0025_1053",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T06:30:16Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0025_44522",
+          "order_id": "order_0025_1053",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T06:30:16Z",
+          "captured_at": "2026-08-01T06:30:45Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 25
+      }
+    },
+    {
+      "case_id": "case_0026",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0026_5889",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T22:10:18Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0026_93748",
+          "order_id": "order_0026_5889",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T22:10:18Z",
+          "captured_at": "2026-08-01T22:10:24Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 26
+      }
+    },
+    {
+      "case_id": "case_0027",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0027_7126",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T19:18:34Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0027_31174",
+          "order_id": "order_0027_7126",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T19:18:34Z",
+          "captured_at": "2026-08-01T19:18:55Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 27
+      }
+    },
+    {
+      "case_id": "case_0028",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0028_6310",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T04:04:22Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0028_74042",
+          "order_id": "order_0028_6310",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T04:04:22Z",
+          "captured_at": "2026-08-01T04:04:52Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 28
+      }
+    },
+    {
+      "case_id": "case_0029",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0029_6038",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T08:46:11Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0029_41385",
+          "order_id": "order_0029_6038",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T08:46:11Z",
+          "captured_at": "2026-08-01T08:46:15Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 29
+      }
+    },
+    {
+      "case_id": "case_0030",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0030_8962",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T04:34:43Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0030_19071",
+          "order_id": "order_0030_8962",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T04:34:43Z",
+          "captured_at": "2026-08-01T04:35:06Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 30
+      }
+    },
+    {
+      "case_id": "case_0031",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0031_8787",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T09:39:01Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0031_82063",
+          "order_id": "order_0031_8787",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T09:39:01Z",
+          "captured_at": "2026-08-01T09:39:09Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 31
+      }
+    },
+    {
+      "case_id": "case_0032",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0032_9835",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T14:31:36Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0032_36365",
+          "order_id": "order_0032_9835",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T14:31:36Z",
+          "captured_at": "2026-08-01T14:31:52Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 32
+      }
+    },
+    {
+      "case_id": "case_0033",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0033_9479",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T09:01:33Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0033_69177",
+          "order_id": "order_0033_9479",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T09:01:33Z",
+          "captured_at": "2026-08-01T09:01:37Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 33
+      }
+    },
+    {
+      "case_id": "case_0034",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0034_6539",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T08:22:41Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0034_12757",
+          "order_id": "order_0034_6539",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T08:22:41Z",
+          "captured_at": "2026-08-01T08:22:43Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 34
+      }
+    },
+    {
+      "case_id": "case_0035",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0035_2163",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T08:20:07Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0035_92719",
+          "order_id": "order_0035_2163",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T08:20:07Z",
+          "captured_at": "2026-08-01T08:20:37Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 35
+      }
+    },
+    {
+      "case_id": "case_0036",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0036_1514",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T18:43:11Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0036_53309",
+          "order_id": "order_0036_1514",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T18:43:11Z",
+          "captured_at": "2026-08-01T18:43:21Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 36
+      }
+    },
+    {
+      "case_id": "case_0037",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0037_8953",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T04:49:02Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0037_38080",
+          "order_id": "order_0037_8953",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T04:49:02Z",
+          "captured_at": "2026-08-01T04:49:11Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 37
+      }
+    },
+    {
+      "case_id": "case_0038",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0038_8749",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T03:26:03Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0038_63354",
+          "order_id": "order_0038_8749",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T03:26:03Z",
+          "captured_at": "2026-08-01T03:26:26Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 38
+      }
+    },
+    {
+      "case_id": "case_0039",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0039_8062",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T14:58:03Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0039_56438",
+          "order_id": "order_0039_8062",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T14:58:03Z",
+          "captured_at": "2026-08-01T14:58:32Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 39
+      }
+    },
+    {
+      "case_id": "case_0040",
+      "scenario": "aligned",
+      "order": {
+        "order_id": "order_0040_1887",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "paid",
+        "created_at": "2026-08-01T02:12:24Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0040_98259",
+          "order_id": "order_0040_1887",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T02:12:24Z",
+          "captured_at": "2026-08-01T02:12:49Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": null
+      },
+      "expected_state": "ALIGNED",
+      "expected_action": "NO_OP",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 40
+      }
+    },
+    {
+      "case_id": "case_0041",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0041_6559",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T06:58:32Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0041_24322",
+          "order_id": "order_0041_6559",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T06:58:32Z",
+          "captured_at": "2026-08-01T06:58:51Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 49900,
+      "meta": {
+        "index": 41
+      }
+    },
+    {
+      "case_id": "case_0042",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0042_8350",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T06:40:50Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0042_28373",
+          "order_id": "order_0042_8350",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T06:40:50Z",
+          "captured_at": "2026-08-01T06:41:06Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 42
+      }
+    },
+    {
+      "case_id": "case_0043",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0043_5092",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T20:02:12Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0043_19880",
+          "order_id": "order_0043_5092",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T20:02:12Z",
+          "captured_at": "2026-08-01T20:02:15Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 43
+      }
+    },
+    {
+      "case_id": "case_0044",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0044_9856",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T08:36:22Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0044_11934",
+          "order_id": "order_0044_9856",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T08:36:22Z",
+          "captured_at": "2026-08-01T08:36:37Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 14900,
+      "meta": {
+        "index": 44
+      }
+    },
+    {
+      "case_id": "case_0045",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0045_8956",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T14:36:05Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0045_73092",
+          "order_id": "order_0045_8956",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T14:36:05Z",
+          "captured_at": "2026-08-01T14:36:12Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 49900,
+      "meta": {
+        "index": 45
+      }
+    },
+    {
+      "case_id": "case_0046",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0046_7209",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T09:39:20Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0046_10282",
+          "order_id": "order_0046_7209",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T09:39:20Z",
+          "captured_at": "2026-08-01T09:39:31Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 46
+      }
+    },
+    {
+      "case_id": "case_0047",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0047_7930",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T05:38:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0047_82845",
+          "order_id": "order_0047_7930",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T05:38:09Z",
+          "captured_at": "2026-08-01T05:38:20Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 47
+      }
+    },
+    {
+      "case_id": "case_0048",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0048_4566",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T02:13:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0048_17665",
+          "order_id": "order_0048_4566",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T02:13:09Z",
+          "captured_at": "2026-08-01T02:13:12Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 48
+      }
+    },
+    {
+      "case_id": "case_0049",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0049_1821",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T18:18:29Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0049_86569",
+          "order_id": "order_0049_1821",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T18:18:29Z",
+          "captured_at": "2026-08-01T18:18:32Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 49
+      }
+    },
+    {
+      "case_id": "case_0050",
+      "scenario": "webhook_delayed_ghost",
+      "order": {
+        "order_id": "order_0050_9320",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T02:29:41Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0050_20500",
+          "order_id": "order_0050_9320",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T02:29:41Z",
+          "captured_at": "2026-08-01T02:29:50Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": true,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Webhook delayed; order still pending"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 19900,
+      "meta": {
+        "index": 50
+      }
+    },
+    {
+      "case_id": "case_0051",
+      "scenario": "orphan_payment",
+      "order": null,
+      "payments": [
+        {
+          "payment_id": "pay_0051_21003",
+          "order_id": null,
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T04:56:26Z",
+          "captured_at": "2026-08-01T04:56:31Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Payment captured without order linkage"
+      },
+      "expected_state": "ORPHAN_PAYMENT",
+      "expected_action": "LINK_OR_REFUND",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 51,
+        "orphan": true
+      }
+    },
+    {
+      "case_id": "case_0052",
+      "scenario": "orphan_payment",
+      "order": null,
+      "payments": [
+        {
+          "payment_id": "pay_0052_16590",
+          "order_id": null,
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T13:48:09Z",
+          "captured_at": "2026-08-01T13:48:14Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Payment captured without order linkage"
+      },
+      "expected_state": "ORPHAN_PAYMENT",
+      "expected_action": "LINK_OR_REFUND",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 52,
+        "orphan": true
+      }
+    },
+    {
+      "case_id": "case_0053",
+      "scenario": "orphan_payment",
+      "order": null,
+      "payments": [
+        {
+          "payment_id": "pay_0053_69598",
+          "order_id": null,
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T12:17:16Z",
+          "captured_at": "2026-08-01T12:17:21Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Payment captured without order linkage"
+      },
+      "expected_state": "ORPHAN_PAYMENT",
+      "expected_action": "LINK_OR_REFUND",
+      "expected_amount_recovered_paise": 149900,
+      "meta": {
+        "index": 53,
+        "orphan": true
+      }
+    },
+    {
+      "case_id": "case_0054",
+      "scenario": "orphan_payment",
+      "order": null,
+      "payments": [
+        {
+          "payment_id": "pay_0054_65255",
+          "order_id": null,
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T02:58:55Z",
+          "captured_at": "2026-08-01T02:59:00Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Payment captured without order linkage"
+      },
+      "expected_state": "ORPHAN_PAYMENT",
+      "expected_action": "LINK_OR_REFUND",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 54,
+        "orphan": true
+      }
+    },
+    {
+      "case_id": "case_0055",
+      "scenario": "orphan_payment",
+      "order": null,
+      "payments": [
+        {
+          "payment_id": "pay_0055_80702",
+          "order_id": null,
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T12:44:30Z",
+          "captured_at": "2026-08-01T12:44:35Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Payment captured without order linkage"
+      },
+      "expected_state": "ORPHAN_PAYMENT",
+      "expected_action": "LINK_OR_REFUND",
+      "expected_amount_recovered_paise": 9900,
+      "meta": {
+        "index": 55,
+        "orphan": true
+      }
+    },
+    {
+      "case_id": "case_0056",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0056_6718",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T13:27:14Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0056_19016",
+          "order_id": "order_0056_6718",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T13:27:14Z",
+          "captured_at": "2026-08-01T13:27:29Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 49900,
+      "meta": {
+        "index": 56
+      }
+    },
+    {
+      "case_id": "case_0057",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0057_8179",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T22:16:13Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0057_81200",
+          "order_id": "order_0057_8179",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T22:16:13Z",
+          "captured_at": "2026-08-01T22:17:00Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 57
+      }
+    },
+    {
+      "case_id": "case_0058",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0058_5905",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T04:53:21Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0058_96951",
+          "order_id": "order_0058_5905",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T04:53:21Z",
+          "captured_at": "2026-08-01T04:53:33Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 14900,
+      "meta": {
+        "index": 58
+      }
+    },
+    {
+      "case_id": "case_0059",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0059_2753",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T09:54:57Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0059_82512",
+          "order_id": "order_0059_2753",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T09:54:57Z",
+          "captured_at": "2026-08-01T09:55:40Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 19900,
+      "meta": {
+        "index": 59
+      }
+    },
+    {
+      "case_id": "case_0060",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0060_4450",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T23:05:30Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0060_54942",
+          "order_id": "order_0060_4450",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T23:05:30Z",
+          "captured_at": "2026-08-01T23:06:07Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 49900,
+      "meta": {
+        "index": 60
+      }
+    },
+    {
+      "case_id": "case_0061",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0061_9004",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T03:21:37Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0061_42914",
+          "order_id": "order_0061_9004",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T03:21:37Z",
+          "captured_at": "2026-08-01T03:22:35Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 9900,
+      "meta": {
+        "index": 61
+      }
+    },
+    {
+      "case_id": "case_0062",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0062_5533",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T12:08:39Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0062_15778",
+          "order_id": "order_0062_5533",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T12:08:39Z",
+          "captured_at": "2026-08-01T12:09:24Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 9900,
+      "meta": {
+        "index": 62
+      }
+    },
+    {
+      "case_id": "case_0063",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0063_5291",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T20:05:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0063_31178",
+          "order_id": "order_0063_5291",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T20:05:09Z",
+          "captured_at": "2026-08-01T20:05:49Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 63
+      }
+    },
+    {
+      "case_id": "case_0064",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0064_1158",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T05:25:36Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0064_24663",
+          "order_id": "order_0064_1158",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T05:25:36Z",
+          "captured_at": "2026-08-01T05:26:34Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 14900,
+      "meta": {
+        "index": 64
+      }
+    },
+    {
+      "case_id": "case_0065",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0065_7049",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T05:23:30Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0065_86350",
+          "order_id": "order_0065_7049",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T05:23:30Z",
+          "captured_at": "2026-08-01T05:23:43Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 65
+      }
+    },
+    {
+      "case_id": "case_0066",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0066_1685",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T01:27:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0066_50404",
+          "order_id": "order_0066_1685",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T01:27:09Z",
+          "captured_at": "2026-08-01T01:27:27Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 149900,
+      "meta": {
+        "index": 66
+      }
+    },
+    {
+      "case_id": "case_0067",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0067_5088",
+        "amount_paise": 14900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T12:52:37Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0067_97416",
+          "order_id": "order_0067_5088",
+          "amount_paise": 14900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T12:52:37Z",
+          "captured_at": "2026-08-01T12:53:21Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 14900,
+      "meta": {
+        "index": 67
+      }
+    },
+    {
+      "case_id": "case_0068",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0068_3532",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T06:26:46Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0068_41029",
+          "order_id": "order_0068_3532",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T06:26:46Z",
+          "captured_at": "2026-08-01T06:26:52Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 19900,
+      "meta": {
+        "index": 68
+      }
+    },
+    {
+      "case_id": "case_0069",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0069_3938",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T09:02:07Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0069_53540",
+          "order_id": "order_0069_3938",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T09:02:07Z",
+          "captured_at": "2026-08-01T09:02:22Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 69
+      }
+    },
+    {
+      "case_id": "case_0070",
+      "scenario": "client_timeout_ghost",
+      "order": {
+        "order_id": "order_0070_2771",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T17:08:14Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0070_60140",
+          "order_id": "order_0070_2771",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T17:08:14Z",
+          "captured_at": "2026-08-01T17:08:31Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": true,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Client timed out; payment captured on rail"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 9900,
+      "meta": {
+        "index": 70
+      }
+    },
+    {
+      "case_id": "case_0071",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0071_8541",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T08:17:11Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0071_55830",
+          "order_id": "order_0071_8541",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T08:17:11Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T08:17:14Z"
+        },
+        {
+          "payment_id": "pay_0071_13101",
+          "order_id": "order_0071_8541",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T08:17:19Z",
+          "captured_at": "2026-08-01T08:17:23Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 71
+      }
+    },
+    {
+      "case_id": "case_0072",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0072_4164",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T10:08:37Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0072_62227",
+          "order_id": "order_0072_4164",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "upi",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T10:08:37Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T10:08:40Z"
+        },
+        {
+          "payment_id": "pay_0072_46585",
+          "order_id": "order_0072_4164",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T10:08:45Z",
+          "captured_at": "2026-08-01T10:08:49Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 149900,
+      "meta": {
+        "index": 72
+      }
+    },
+    {
+      "case_id": "case_0073",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0073_6753",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T14:33:06Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0073_94080",
+          "order_id": "order_0073_6753",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T14:33:06Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T14:33:09Z"
+        },
+        {
+          "payment_id": "pay_0073_13617",
+          "order_id": "order_0073_6753",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T14:33:14Z",
+          "captured_at": "2026-08-01T14:33:18Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 73
+      }
+    },
+    {
+      "case_id": "case_0074",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0074_2889",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T21:08:19Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0074_44237",
+          "order_id": "order_0074_2889",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T21:08:19Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T21:08:22Z"
+        },
+        {
+          "payment_id": "pay_0074_15014",
+          "order_id": "order_0074_2889",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T21:08:27Z",
+          "captured_at": "2026-08-01T21:08:31Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 19900,
+      "meta": {
+        "index": 74
+      }
+    },
+    {
+      "case_id": "case_0075",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0075_2776",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T12:35:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0075_88193",
+          "order_id": "order_0075_2776",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T12:35:09Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T12:35:12Z"
+        },
+        {
+          "payment_id": "pay_0075_67199",
+          "order_id": "order_0075_2776",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T12:35:17Z",
+          "captured_at": "2026-08-01T12:35:21Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 75
+      }
+    },
+    {
+      "case_id": "case_0076",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0076_9379",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T20:59:34Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0076_25157",
+          "order_id": "order_0076_9379",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T20:59:34Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T20:59:37Z"
+        },
+        {
+          "payment_id": "pay_0076_43386",
+          "order_id": "order_0076_9379",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T20:59:42Z",
+          "captured_at": "2026-08-01T20:59:46Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 76
+      }
+    },
+    {
+      "case_id": "case_0077",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0077_1727",
+        "amount_paise": 9900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T18:55:46Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0077_67154",
+          "order_id": "order_0077_1727",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T18:55:46Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T18:55:49Z"
+        },
+        {
+          "payment_id": "pay_0077_57739",
+          "order_id": "order_0077_1727",
+          "amount_paise": 9900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T18:55:54Z",
+          "captured_at": "2026-08-01T18:55:58Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 9900,
+      "meta": {
+        "index": 77
+      }
+    },
+    {
+      "case_id": "case_0078",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0078_8066",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T22:41:18Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0078_19171",
+          "order_id": "order_0078_8066",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T22:41:18Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T22:41:21Z"
+        },
+        {
+          "payment_id": "pay_0078_96951",
+          "order_id": "order_0078_8066",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "netbanking",
+          "error_code": null,
+          "created_at": "2026-08-01T22:41:26Z",
+          "captured_at": "2026-08-01T22:41:30Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 149900,
+      "meta": {
+        "index": 78
+      }
+    },
+    {
+      "case_id": "case_0079",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0079_3041",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T11:15:38Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0079_49363",
+          "order_id": "order_0079_3041",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T11:15:38Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T11:15:41Z"
+        },
+        {
+          "payment_id": "pay_0079_52753",
+          "order_id": "order_0079_3041",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T11:15:46Z",
+          "captured_at": "2026-08-01T11:15:50Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 79
+      }
+    },
+    {
+      "case_id": "case_0080",
+      "scenario": "double_submit",
+      "order": {
+        "order_id": "order_0080_7592",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T04:38:03Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0080_48752",
+          "order_id": "order_0080_7592",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T04:38:03Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T04:38:06Z"
+        },
+        {
+          "payment_id": "pay_0080_65108",
+          "order_id": "order_0080_7592",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "captured",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T04:38:11Z",
+          "captured_at": "2026-08-01T04:38:15Z",
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": true,
+        "api_available": true,
+        "notes": "Two payment attempts; one captured"
+      },
+      "expected_state": "GHOST_SUCCESS",
+      "expected_action": "CONFIRM_ORDER",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 80
+      }
+    },
+    {
+      "case_id": "case_0081",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0081_7211",
+        "amount_paise": 19900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T22:24:36Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0081_98777",
+          "order_id": "order_0081_7211",
+          "amount_paise": 19900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "UPI_TEMPORARY_FAILURE",
+          "created_at": "2026-08-01T22:24:36Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T22:24:46Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline UPI_TEMPORARY_FAILURE"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 19900,
+      "meta": {
+        "index": 81
+      }
+    },
+    {
+      "case_id": "case_0082",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0082_1006",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T07:39:09Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0082_49829",
+          "order_id": "order_0082_1006",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "INSUFFICIENT_BALANCE",
+          "created_at": "2026-08-01T07:39:09Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T07:39:18Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline INSUFFICIENT_BALANCE"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 82
+      }
+    },
+    {
+      "case_id": "case_0083",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0083_8238",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T18:36:40Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0083_67954",
+          "order_id": "order_0083_8238",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T18:36:40Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T18:36:52Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline GATEWAY_TIMEOUT"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 49900,
+      "meta": {
+        "index": 83
+      }
+    },
+    {
+      "case_id": "case_0084",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0084_2389",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T23:02:40Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0084_47196",
+          "order_id": "order_0084_2389",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "BANK_TECHNICAL_ERROR",
+          "created_at": "2026-08-01T23:02:40Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T23:02:55Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline BANK_TECHNICAL_ERROR"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 84
+      }
+    },
+    {
+      "case_id": "case_0085",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0085_4848",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T08:10:44Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0085_98184",
+          "order_id": "order_0085_4848",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T08:10:44Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T08:10:46Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline GATEWAY_TIMEOUT"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 99900,
+      "meta": {
+        "index": 85
+      }
+    },
+    {
+      "case_id": "case_0086",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0086_1757",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T22:15:20Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0086_42092",
+          "order_id": "order_0086_1757",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "upi",
+          "error_code": "UPI_TEMPORARY_FAILURE",
+          "created_at": "2026-08-01T22:15:20Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T22:15:28Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline UPI_TEMPORARY_FAILURE"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 86
+      }
+    },
+    {
+      "case_id": "case_0087",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0087_4185",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T14:33:03Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0087_60328",
+          "order_id": "order_0087_4185",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T14:33:03Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T14:33:15Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline GATEWAY_TIMEOUT"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 87
+      }
+    },
+    {
+      "case_id": "case_0088",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0088_1090",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T07:58:03Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0088_23970",
+          "order_id": "order_0088_1090",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "UPI_TEMPORARY_FAILURE",
+          "created_at": "2026-08-01T07:58:03Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T07:58:05Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline UPI_TEMPORARY_FAILURE"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 249900,
+      "meta": {
+        "index": 88
+      }
+    },
+    {
+      "case_id": "case_0089",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0089_5082",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T04:51:17Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0089_25906",
+          "order_id": "order_0089_5082",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "INSUFFICIENT_BALANCE",
+          "created_at": "2026-08-01T04:51:17Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T04:51:31Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline INSUFFICIENT_BALANCE"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 499900,
+      "meta": {
+        "index": 89
+      }
+    },
+    {
+      "case_id": "case_0090",
+      "scenario": "soft_decline",
+      "order": {
+        "order_id": "order_0090_8251",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T15:32:13Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0090_90301",
+          "order_id": "order_0090_8251",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "GATEWAY_TIMEOUT",
+          "created_at": "2026-08-01T15:32:13Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T15:32:26Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Soft decline GATEWAY_TIMEOUT"
+      },
+      "expected_state": "SOFT_DECLINE",
+      "expected_action": "SCHEDULE_RETRY",
+      "expected_amount_recovered_paise": 999900,
+      "meta": {
+        "index": 90
+      }
+    },
+    {
+      "case_id": "case_0091",
+      "scenario": "hard_decline",
+      "order": {
+        "order_id": "order_0091_8777",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T09:00:06Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0091_68991",
+          "order_id": "order_0091_8777",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "PAYMENT_DECLINED",
+          "created_at": "2026-08-01T09:00:06Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T09:00:18Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Hard decline PAYMENT_DECLINED"
+      },
+      "expected_state": "HARD_FAIL",
+      "expected_action": "MARK_LOST",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 91
+      }
+    },
+    {
+      "case_id": "case_0092",
+      "scenario": "hard_decline",
+      "order": {
+        "order_id": "order_0092_4919",
+        "amount_paise": 499900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T02:49:15Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0092_45992",
+          "order_id": "order_0092_4919",
+          "amount_paise": 499900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "netbanking",
+          "error_code": "CARD_EXPIRED",
+          "created_at": "2026-08-01T02:49:15Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T02:49:21Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Hard decline CARD_EXPIRED"
+      },
+      "expected_state": "HARD_FAIL",
+      "expected_action": "MARK_LOST",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 92
+      }
+    },
+    {
+      "case_id": "case_0093",
+      "scenario": "hard_decline",
+      "order": {
+        "order_id": "order_0093_6502",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T02:56:01Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0093_51904",
+          "order_id": "order_0093_6502",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "CARD_EXPIRED",
+          "created_at": "2026-08-01T02:56:01Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T02:56:06Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Hard decline CARD_EXPIRED"
+      },
+      "expected_state": "HARD_FAIL",
+      "expected_action": "MARK_LOST",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 93
+      }
+    },
+    {
+      "case_id": "case_0094",
+      "scenario": "hard_decline",
+      "order": {
+        "order_id": "order_0094_7275",
+        "amount_paise": 49900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T02:20:18Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0094_30028",
+          "order_id": "order_0094_7275",
+          "amount_paise": 49900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "wallet",
+          "error_code": "PAYMENT_DECLINED",
+          "created_at": "2026-08-01T02:20:18Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T02:20:25Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Hard decline PAYMENT_DECLINED"
+      },
+      "expected_state": "HARD_FAIL",
+      "expected_action": "MARK_LOST",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 94
+      }
+    },
+    {
+      "case_id": "case_0095",
+      "scenario": "hard_decline",
+      "order": {
+        "order_id": "order_0095_9890",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "failed",
+        "created_at": "2026-08-01T02:16:01Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0095_71069",
+          "order_id": "order_0095_9890",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "failed",
+          "method": "card",
+          "error_code": "PAYMENT_DECLINED",
+          "created_at": "2026-08-01T02:16:01Z",
+          "captured_at": null,
+          "failed_at": "2026-08-01T02:16:09Z"
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": true,
+        "notes": "Hard decline PAYMENT_DECLINED"
+      },
+      "expected_state": "HARD_FAIL",
+      "expected_action": "MARK_LOST",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 95
+      }
+    },
+    {
+      "case_id": "case_0096",
+      "scenario": "ambiguous_api_down",
+      "order": {
+        "order_id": "order_0096_1320",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T17:21:58Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0096_85456",
+          "order_id": "order_0096_1320",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "created",
+          "method": "upi",
+          "error_code": null,
+          "created_at": "2026-08-01T17:21:58Z",
+          "captured_at": null,
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": false,
+        "notes": "Payment API unavailable"
+      },
+      "expected_state": "AMBIGUOUS",
+      "expected_action": "ESCALATE",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 96
+      }
+    },
+    {
+      "case_id": "case_0097",
+      "scenario": "ambiguous_api_down",
+      "order": {
+        "order_id": "order_0097_6763",
+        "amount_paise": 249900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T15:15:21Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0097_49139",
+          "order_id": "order_0097_6763",
+          "amount_paise": 249900,
+          "currency": "INR",
+          "status": "created",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T15:15:21Z",
+          "captured_at": null,
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": false,
+        "notes": "Payment API unavailable"
+      },
+      "expected_state": "AMBIGUOUS",
+      "expected_action": "ESCALATE",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 97
+      }
+    },
+    {
+      "case_id": "case_0098",
+      "scenario": "ambiguous_api_down",
+      "order": {
+        "order_id": "order_0098_8999",
+        "amount_paise": 99900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T15:52:05Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0098_38760",
+          "order_id": "order_0098_8999",
+          "amount_paise": 99900,
+          "currency": "INR",
+          "status": "created",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T15:52:05Z",
+          "captured_at": null,
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": false,
+        "notes": "Payment API unavailable"
+      },
+      "expected_state": "AMBIGUOUS",
+      "expected_action": "ESCALATE",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 98
+      }
+    },
+    {
+      "case_id": "case_0099",
+      "scenario": "ambiguous_api_down",
+      "order": {
+        "order_id": "order_0099_1475",
+        "amount_paise": 149900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T14:43:14Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0099_60968",
+          "order_id": "order_0099_1475",
+          "amount_paise": 149900,
+          "currency": "INR",
+          "status": "created",
+          "method": "card",
+          "error_code": null,
+          "created_at": "2026-08-01T14:43:14Z",
+          "captured_at": null,
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": false,
+        "notes": "Payment API unavailable"
+      },
+      "expected_state": "AMBIGUOUS",
+      "expected_action": "ESCALATE",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 99
+      }
+    },
+    {
+      "case_id": "case_0100",
+      "scenario": "ambiguous_api_down",
+      "order": {
+        "order_id": "order_0100_8657",
+        "amount_paise": 999900,
+        "currency": "INR",
+        "status": "pending",
+        "created_at": "2026-08-01T00:58:54Z"
+      },
+      "payments": [
+        {
+          "payment_id": "pay_0100_26728",
+          "order_id": "order_0100_8657",
+          "amount_paise": 999900,
+          "currency": "INR",
+          "status": "created",
+          "method": "wallet",
+          "error_code": null,
+          "created_at": "2026-08-01T00:58:54Z",
+          "captured_at": null,
+          "failed_at": null
+        }
+      ],
+      "signals": {
+        "webhook_delayed": false,
+        "client_timeout": false,
+        "double_submit": false,
+        "api_available": false,
+        "notes": "Payment API unavailable"
+      },
+      "expected_state": "AMBIGUOUS",
+      "expected_action": "ESCALATE",
+      "expected_amount_recovered_paise": 0,
+      "meta": {
+        "index": 100
+      }
+    }
+  ]
+}
