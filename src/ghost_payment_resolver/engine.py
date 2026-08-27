@@ -19,13 +19,21 @@ from ghost_payment_resolver.schemas import (
     LabeledCase,
 )
 from ghost_payment_resolver.states import Action
+from ghost_payment_resolver.storage import AuditDatabase
 
 
 class ResolutionEngine:
     """Coordinates matcher diagnostics, policy checks, action execution, and audit logging."""
 
-    def __init__(self, policy_config: PolicyConfig | None = None) -> None:
+    def __init__(
+        self,
+        policy_config: PolicyConfig | None = None,
+        storage: AuditDatabase | None = None,
+        persist_audits: bool = True,
+    ) -> None:
         self.policy_engine = PolicyEngine(policy_config or PolicyConfig(daily_cap_paise=50_000_000))
+        self.storage = storage or AuditDatabase()
+        self.persist_audits = persist_audits
 
     def resolve_case(
         self,
@@ -90,7 +98,7 @@ class ResolutionEngine:
             "recovered_inr": amount_recovered / 100,
         }
 
-        return AuditRecord(
+        record = AuditRecord(
             audit_id=audit_id,
             case_id=case.case_id,
             timestamp=now,
@@ -103,6 +111,14 @@ class ResolutionEngine:
             inputs=inputs_summary,
             outcome=outcome_summary,
         )
+
+        if self.persist_audits:
+            try:
+                self.storage.save_audit(record)
+            except Exception as e:  # noqa: BLE001
+                _ = e
+
+        return record
 
     def run_batch(
         self,

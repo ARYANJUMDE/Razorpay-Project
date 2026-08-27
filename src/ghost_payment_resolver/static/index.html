@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghost Payment Resolver — AI Revenue Recovery Dashboard</title>
+  <meta name="description" content="AI Revenue Recovery agent for payment-order mismatches (Razorpay /buildathon Track 03)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- TOP HEADER -->
+    <header class="app-header">
+      <div class="brand-section">
+        <div class="brand-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="brand-title">
+          <div class="title-row">
+            <h1>Ghost Payment Resolver</h1>
+            <span class="badge buildathon-badge">Track 03 • AI Revenue Recovery</span>
+          </div>
+          <p class="subtitle">Autonomous Payment–Order Mismatch Diagnostic & Safe Resolution Engine</p>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <div class="status-indicator" id="system-status-indicator">
+          <span class="pulse-dot"></span>
+          <span class="status-text" id="system-status-text">Payment Rails Active</span>
+        </div>
+        <a href="/docs" target="_blank" class="btn btn-secondary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          API Docs
+        </a>
+        <button id="btn-export-csv" class="btn btn-secondary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Export Audit CSV
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN METRIC KPI GRID -->
+    <section class="kpi-grid">
+      <div class="kpi-card highlight-card">
+        <div class="kpi-icon-wrap green-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Total Revenue Recovered</span>
+          <h2 class="kpi-value" id="kpi-recovered-amount">₹0.00</h2>
+          <span class="kpi-subtext" id="kpi-recovered-paise">0 paise protected</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap blue-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Recovery Rate</span>
+          <h2 class="kpi-value" id="kpi-recovery-rate">0.0%</h2>
+          <span class="kpi-subtext" id="kpi-recoverable-count">0 / 0 recoverable cases</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap purple-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">False Action Rate</span>
+          <h2 class="kpi-value safe-value" id="kpi-false-action-rate">0.00%</h2>
+          <span class="kpi-subtext">Zero hallucinated state changes</span>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon-wrap amber-icon">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        </div>
+        <div class="kpi-info">
+          <span class="kpi-label">Escalation Precision</span>
+          <h2 class="kpi-value" id="kpi-escalation-precision">100.0%</h2>
+          <span class="kpi-subtext" id="kpi-escalation-count">0 safe escalations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTROL PANEL & BENCHMARK CONTROLS -->
+    <section class="control-panel">
+      <div class="control-group left">
+        <button id="btn-run-batch" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          Run Batch Evaluation (100 Cases)
+        </button>
+
+        <div class="switch-control-wrap">
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggle-circuit-breaker">
+            <span class="slider"></span>
+          </label>
+          <div class="toggle-label-wrap">
+            <span class="toggle-title">Simulate Payment API Down (Circuit Breaker Demo)</span>
+            <span class="toggle-hint">Demonstrates guaranteed safe fallback to ESCALATE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group right">
+        <div class="cap-control-wrap">
+          <label for="input-daily-cap" class="cap-label">Daily Policy Cap (Paise):</label>
+          <input type="number" id="input-daily-cap" value="50000000" step="1000000" class="input-field">
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENARIO FILTER TABS -->
+    <section class="filter-section">
+      <div class="filter-tabs" id="filter-tabs">
+        <button class="filter-pill active" data-filter="all">All Cases (100)</button>
+        <button class="filter-pill" data-filter="aligned">Aligned (40)</button>
+        <button class="filter-pill" data-filter="webhook">Webhook Delayed (15)</button>
+        <button class="filter-pill" data-filter="timeout">Client Timeout (15)</button>
+        <button class="filter-pill" data-filter="double">Double Submit (10)</button>
+        <button class="filter-pill" data-filter="soft">Soft Decline (10)</button>
+        <button class="filter-pill" data-filter="hard">Hard Decline (5)</button>
+        <button class="filter-pill" data-filter="ambiguous">Ambiguous / API Down (5)</button>
+      </div>
+    </section>
+
+    <!-- CASE EXPLORER TABLE -->
+    <section class="table-section">
+      <div class="table-header">
+        <h3>Synthetic Case Explorer & Audit Stream</h3>
+        <span class="case-counter" id="case-counter">Showing 100 cases</span>
+      </div>
+
+      <div class="table-container">
+        <table class="data-table" id="cases-table">
+          <thead>
+            <tr>
+              <th>Case ID</th>
+              <th>Scenario</th>
+              <th>Order ID</th>
+              <th>Amount</th>
+              <th>Rail Status</th>
+              <th>Diagnosis State</th>
+              <th>Action Taken</th>
+              <th>₹ Recovered</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="cases-tbody">
+            <!-- Populated dynamically via app.js -->
+            <tr>
+              <td colspan="9" class="loading-cell">Loading cases...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- AUDIT PERSISTENCE DRAWER / SECTION -->
+    <section class="audit-stream-section">
+      <div class="section-title-row">
+        <h3>SQLite Persistent Audit Trail (Latest 10 Rows)</h3>
+        <button id="btn-refresh-audits" class="btn btn-sm btn-secondary">Refresh Logs</button>
+      </div>
+      <div class="audit-log-list" id="audit-log-list">
+        <!-- Populated via SQLite -->
+      </div>
+    </section>
+  </div>
+
+  <!-- CASE DETAILS & AI EXPLAINER MODAL -->
+  <div class="modal-backdrop" id="case-modal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="badge" id="modal-case-badge">CASE_ID</span>
+          <h2 id="modal-title">Case Diagnostic & AI Explanation</h2>
+        </div>
+        <button class="modal-close-btn" id="modal-close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Diagnostic Summary Banner -->
+        <div class="diagnostic-banner" id="modal-banner">
+          <div class="banner-state">
+            <span class="label">Observed State:</span>
+            <span class="val" id="modal-observed-state">GHOST_SUCCESS</span>
+          </div>
+          <div class="banner-action">
+            <span class="label">Action Executed:</span>
+            <span class="val" id="modal-action-taken">CONFIRM_ORDER</span>
+          </div>
+          <div class="banner-recovered">
+            <span class="label">Recovered:</span>
+            <span class="val highlight" id="modal-recovered-val">₹1,499.00</span>
+          </div>
+        </div>
+
+        <!-- AI Explainability Section -->
+        <div class="ai-explainer-card">
+          <div class="card-header">
+            <div class="card-title">
+              <svg width="18" height="18" fill="none" stroke="#3395FF" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"></path></svg>
+              <span>AI Root-Cause Diagnosis & Customer Messaging</span>
+            </div>
+            <span class="source-tag" id="modal-ai-source">Engine Powered</span>
+          </div>
+
+          <div class="ai-content-block">
+            <div class="ai-field">
+              <label>Root Cause Analysis</label>
+              <p id="modal-ai-root-cause" class="ai-text">Analyzing root cause...</p>
+            </div>
+            
+            <div class="ai-field">
+              <label>Merchant Operations Summary</label>
+              <p id="modal-ai-merchant-summary" class="ai-text">Generating summary...</p>
+            </div>
+
+            <div class="ai-messages-grid">
+              <div class="message-box">
+                <div class="msg-header">
+                  <span>Customer Notification (English)</span>
+                  <button class="btn-copy" onclick="copyText('modal-ai-customer-en')">Copy</button>
+                </div>
+                <div class="msg-bubble" id="modal-ai-customer-en">Drafting message...</div>
+              </div>
+
+              <div class="message-box hinglish-box">
+                <div class="msg-header">
+                  <span>Customer Notification (Hinglish / India)</span>
+                  <button class="btn-copy" onclick="copyText('modal-ai-customer-hinglish')">Copy</button>
+                </div>
+                <div class="msg-bubble" id="modal-ai-customer-hinglish">Drafting Hinglish message...</div>
+              </div>
+            </div>
+
+            <div class="safety-badge" id="modal-ai-safety">
+              ✓ Guaranteed bounded resolution: Action strictly verified against Razorpay ground-truth rails.
+            </div>
+          </div>
+        </div>
+
+        <!-- Raw Signals Comparison (Order vs Payment) -->
+        <div class="signals-comparison-grid">
+          <div class="signal-card">
+            <h4>Merchant Order Entity</h4>
+            <pre><code id="modal-order-json">{}</code></pre>
+          </div>
+          <div class="signal-card">
+            <h4>Razorpay Payment Rail Entity</h4>
+            <pre><code id="modal-payment-json">{}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="modal-resolve-btn" class="btn btn-primary">Re-Run Single Resolution</button>
+        <button id="modal-dismiss-btn" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -59,3 +59,55 @@ def test_batch_run_and_metrics():
     assert metrics_resp.status_code == 200
     metrics = metrics_resp.json()
     assert metrics["total_cases"] == 100
+
+
+def test_dashboard_endpoint():
+    response = client.get("/")
+    assert response.status_code == 200
+    assert "Ghost Payment Resolver" in response.text
+
+
+def test_explain_case_endpoint():
+    cases_resp = client.get("/cases?limit=1")
+    first_case_id = cases_resp.json()[0]["case_id"]
+
+    response = client.post(f"/cases/{first_case_id}/explain")
+    assert response.status_code == 200
+    data = response.json()
+    assert "root_cause_analysis" in data
+    assert "customer_message_hinglish" in data
+    assert "merchant_summary" in data
+
+
+def test_audits_and_export_endpoints():
+    response = client.get("/audits?limit=5")
+    assert response.status_code == 200
+    audits = response.json()
+    assert isinstance(audits, list)
+
+    export_resp = client.get("/audits/export")
+    assert export_resp.status_code == 200
+    assert "audit_id" in export_resp.text
+
+
+def test_razorpay_webhook_endpoint():
+    payload = {
+        "event": "payment.captured",
+        "payload": {
+            "payment": {
+                "entity": {
+                    "id": "pay_live_test_001",
+                    "amount": 250000,
+                    "status": "captured",
+                    "order_id": "order_live_001",
+                    "method": "upi",
+                }
+            }
+        },
+    }
+    response = client.post("/webhooks/razorpay", json=payload)
+    assert response.status_code == 200
+    data = response.json()
+    assert data["status"] == "processed"
+    assert data["action_taken"] == Action.CONFIRM_ORDER.value
+
