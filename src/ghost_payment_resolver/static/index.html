@@ -3,93 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Payment Resolver — AI Revenue Recovery Dashboard</title>
-  <meta name="description" content="AI Revenue Recovery agent for payment-order mismatches (Razorpay /buildathon Track 03)">
+  <title>Ghost Payment Resolver — Autonomous AI Revenue Recovery</title>
+  <meta name="description" content="Autonomous Payment-Order Mismatch Diagnostic & Safe Resolution Engine (Razorpay /buildathon Track 03)">
+  
+  <!-- Modern Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/style.css?v=5.0">
 </head>
 <body>
+  <!-- Ambient Atmospheric Night Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Live Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
   <div class="app-container">
-    <!-- TOP HEADER -->
+    <!-- TOP COMMAND CENTER HEADER -->
     <header class="app-header">
       <div class="brand-section">
         <div class="brand-logo">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 17L12 22L22 17" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M2 12L12 17L22 12" stroke="#3395FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+          <div class="logo-inner">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#blue-cyan-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="url(#blue-cyan-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="url(#blue-cyan-grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="blue-cyan-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#00f0ff"/>
+                  <stop offset="1" stop-color="#3b82f6"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
         <div class="brand-title">
           <div class="title-row">
             <h1>Ghost Payment Resolver</h1>
-            <span class="badge buildathon-badge">Track 03 • AI Revenue Recovery</span>
+            <span class="badge buildathon-badge">
+              <span class="badge-glow"></span>
+              Track 03 • AI Revenue Recovery
+            </span>
           </div>
           <p class="subtitle">Autonomous Payment–Order Mismatch Diagnostic & Safe Resolution Engine</p>
         </div>
       </div>
       
       <div class="header-actions">
+        <!-- Live System Clock -->
+        <div class="clock-display" title="Live Operations Clock">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span id="live-clock">23:59:00</span>
+        </div>
+
         <div class="status-indicator" id="system-status-indicator">
           <span class="pulse-dot"></span>
           <span class="status-text" id="system-status-text">Payment Rails Active</span>
         </div>
+
+        <!-- Webhook Sandbox Trigger -->
+        <button id="btn-open-webhook-modal" class="btn btn-secondary btn-glow-subtle">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+          </svg>
+          <span>Live Webhook Sandbox</span>
+        </button>
+        
         <a href="/docs" target="_blank" class="btn btn-secondary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-          API Docs
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          <span>API Docs</span>
         </a>
+        
         <button id="btn-export-csv" class="btn btn-secondary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-          Export Audit CSV
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>Export Audit CSV</span>
         </button>
       </div>
     </header>
 
-    <!-- MAIN METRIC KPI GRID -->
+    <!-- MAIN TELEMETRY KPI HUD -->
     <section class="kpi-grid">
+      <!-- Total Recovered Revenue Card -->
       <div class="kpi-card highlight-card">
-        <div class="kpi-icon-wrap green-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        <div class="kpi-ambient-glow glow-emerald"></div>
+        <div class="kpi-top">
+          <div class="kpi-icon-wrap emerald-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <span class="kpi-tag live-tag">LIVE PROTECTED</span>
         </div>
         <div class="kpi-info">
           <span class="kpi-label">Total Revenue Recovered</span>
-          <h2 class="kpi-value" id="kpi-recovered-amount">₹0.00</h2>
-          <span class="kpi-subtext" id="kpi-recovered-paise">0 paise protected</span>
+          <h2 class="kpi-value amount-glow" id="kpi-recovered-amount">₹0.00</h2>
+          <div class="kpi-meta-row">
+            <span class="kpi-subtext" id="kpi-recovered-paise">0 paise protected</span>
+            <span class="kpi-trend positive">▲ Bounded Safety</span>
+          </div>
         </div>
       </div>
 
+      <!-- Recovery Rate Card -->
       <div class="kpi-card">
-        <div class="kpi-icon-wrap blue-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+        <div class="kpi-ambient-glow glow-cyan"></div>
+        <div class="kpi-top">
+          <div class="kpi-icon-wrap cyan-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+          </div>
+          <span class="kpi-tag neutral-tag">BENCHMARK</span>
         </div>
         <div class="kpi-info">
           <span class="kpi-label">Recovery Rate</span>
           <h2 class="kpi-value" id="kpi-recovery-rate">0.0%</h2>
+          <div class="kpi-progress-wrap">
+            <div class="kpi-progress-bar" id="bar-recovery-rate" style="width: 100%;"></div>
+          </div>
           <span class="kpi-subtext" id="kpi-recoverable-count">0 / 0 recoverable cases</span>
         </div>
       </div>
 
+      <!-- False Action Rate Card -->
       <div class="kpi-card">
-        <div class="kpi-icon-wrap purple-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <div class="kpi-ambient-glow glow-purple"></div>
+        <div class="kpi-top">
+          <div class="kpi-icon-wrap purple-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <span class="kpi-tag zero-tag">ZERO RISK</span>
         </div>
         <div class="kpi-info">
           <span class="kpi-label">False Action Rate</span>
           <h2 class="kpi-value safe-value" id="kpi-false-action-rate">0.00%</h2>
+          <div class="kpi-progress-wrap">
+            <div class="kpi-progress-bar safe-bar" style="width: 0%;"></div>
+          </div>
           <span class="kpi-subtext">Zero hallucinated state changes</span>
         </div>
       </div>
 
+      <!-- Escalation Precision Card -->
       <div class="kpi-card">
-        <div class="kpi-icon-wrap amber-icon">
-          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <div class="kpi-ambient-glow glow-amber"></div>
+        <div class="kpi-top">
+          <div class="kpi-icon-wrap amber-icon">
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <span class="kpi-tag amber-tag">CIRCUIT BREAKER</span>
         </div>
         <div class="kpi-info">
           <span class="kpi-label">Escalation Precision</span>
           <h2 class="kpi-value" id="kpi-escalation-precision">100.0%</h2>
+          <div class="kpi-progress-wrap">
+            <div class="kpi-progress-bar amber-bar" style="width: 100%;"></div>
+          </div>
           <span class="kpi-subtext" id="kpi-escalation-count">0 safe escalations</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- JUDGE QUICK-LAUNCH DEMO SHOWCASE -->
+    <section class="judge-showcase-section">
+      <div class="showcase-header">
+        <div class="showcase-title-wrap">
+          <span class="showcase-badge">⚡ JUDGE 1-CLICK DEMO TOUR</span>
+          <h2>Instant Interactive Scenario Showcase</h2>
+        </div>
+        <span class="showcase-subtitle">Click any scenario card below to trigger real-time resolution & watch the state machine decision graph update live.</span>
+      </div>
+
+      <div class="judge-cards-grid">
+        <!-- Demo Card 1 -->
+        <div class="judge-card" onclick="runJudgeDemo('case_0041', 'Ghost Recovery')">
+          <div class="judge-card-top">
+            <span class="judge-card-num">01</span>
+            <span class="tag-state tag-ghost">GHOST_SUCCESS</span>
+          </div>
+          <h3>Classic Ghost Payment Recovery</h3>
+          <p>Razorpay captured ₹499.00 on bank rail, but merchant missed the webhook. Engine auto-confirms order.</p>
+          <div class="judge-card-footer">
+            <span class="judge-recovered-label">Recovers: <strong>₹499.00</strong></span>
+            <button class="btn btn-sm btn-primary btn-demo-run">▶ Run Demo</button>
+          </div>
+        </div>
+
+        <!-- Demo Card 2 -->
+        <div class="judge-card" onclick="runJudgeDemo('case_0071', 'Double Submit')">
+          <div class="judge-card-top">
+            <span class="judge-card-num">02</span>
+            <span class="tag-state tag-ghost">DOUBLE_SUBMIT</span>
+          </div>
+          <h3>Double-Submit Refund Shield</h3>
+          <p>Customer tapped pay twice. Confirms primary order and auto-triggers instant refund for duplicate.</p>
+          <div class="judge-card-footer">
+            <span class="judge-recovered-label">Action: <strong>REFUND_DUPLICATE</strong></span>
+            <button class="btn btn-sm btn-primary btn-demo-run">▶ Run Demo</button>
+          </div>
+        </div>
+
+        <!-- Demo Card 3 -->
+        <div class="judge-card" onclick="runJudgeDemo('case_0081', 'Soft Decline')">
+          <div class="judge-card-top">
+            <span class="judge-card-num">03</span>
+            <span class="tag-state tag-soft">SOFT_DECLINE</span>
+          </div>
+          <h3>Bank OTP Network Soft Decline</h3>
+          <p>Temporary bank rail congestion. Schedules smart bounded retry and generates Hinglish customer nudge.</p>
+          <div class="judge-card-footer">
+            <span class="judge-recovered-label">Action: <strong>RETRY_LINK</strong></span>
+            <button class="btn btn-sm btn-primary btn-demo-run">▶ Run Demo</button>
+          </div>
+        </div>
+
+        <!-- Demo Card 4 -->
+        <div class="judge-card" onclick="runJudgeDemo('case_0096', 'Circuit Breaker', true)">
+          <div class="judge-card-top">
+            <span class="judge-card-num">04</span>
+            <span class="tag-state tag-ambiguous">CIRCUIT_BREAKER</span>
+          </div>
+          <h3>Outage Fail-Safe Circuit Breaker</h3>
+          <p>Payment API simulated down. Engine refuses to guess and safely escalates to human queue (0 false actions).</p>
+          <div class="judge-card-footer">
+            <span class="judge-recovered-label">Action: <strong>SAFE ESCALATE</strong></span>
+            <button class="btn btn-sm btn-secondary btn-demo-run">▶ Test Breaker</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PERMANENT MAIN SCREEN: REAL-TIME STATE MACHINE DECISION GRAPH -->
+    <section class="state-machine-dashboard-section">
+      <div class="section-title-row">
+        <div class="audit-header-left">
+          <div class="terminal-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="3" width="6" height="6" rx="1"></rect>
+              <rect x="16" y="3" width="6" height="6" rx="1"></rect>
+              <rect x="9" y="15" width="6" height="6" rx="1"></rect>
+              <path d="M5 9v3a2 2 0 0 0 2 2h5m5-5v3a2 2 0 0 1-2 2h-5m0 0v1"></path>
+            </svg>
+          </div>
+          <div>
+            <h3>Real-Time State Machine Decision Graph & Guardrail Verification</h3>
+            <span style="font-size:12px;color:var(--text-subtle);">Deterministic Decision Path for Currently Selected Case: <strong id="main-sm-case-id" style="color:var(--cyan-neon);">case_0041 (GHOST_SUCCESS)</strong></span>
+          </div>
+        </div>
+        <span class="badge" style="background:rgba(16,185,129,0.15);color:var(--emerald-neon);border:1px solid rgba(16,185,129,0.3);">
+          Zero Hallucination
+        </span>
+      </div>
+
+      <div class="sm-flow-grid" style="margin-top:14px;">
+        <!-- Node 1: Ingestion -->
+        <div class="sm-node active" id="main-node-ingest">
+          <span class="node-step">STEP 1</span>
+          <span class="node-name">Signal Ingestion</span>
+          <span class="node-desc" id="main-node-ingest-desc">Order DB + Razorpay Rail</span>
+        </div>
+        <div class="sm-arrow active">➔</div>
+
+        <!-- Node 2: Diagnostic Matcher -->
+        <div class="sm-node active" id="main-node-diagnose">
+          <span class="node-step">STEP 2</span>
+          <span class="node-name" id="main-node-diagnose-name">GHOST_SUCCESS</span>
+          <span class="node-desc" id="main-node-diagnose-desc">Webhook Latency Match</span>
+        </div>
+        <div class="sm-arrow active">➔</div>
+
+        <!-- Node 3: Policy Guardrails -->
+        <div class="sm-node active" id="main-node-policy">
+          <span class="node-step">STEP 3</span>
+          <span class="node-name">Policy Guardrails</span>
+          <span class="node-desc" id="main-node-policy-desc">Cap & Breaker PASSED</span>
+        </div>
+        <div class="sm-arrow active">➔</div>
+
+        <!-- Node 4: Action Execution -->
+        <div class="sm-node active node-highlight" id="main-node-action">
+          <span class="node-step">STEP 4</span>
+          <span class="node-name" id="main-node-action-name">CONFIRM_ORDER</span>
+          <span class="node-desc" id="main-node-action-desc">Auto-confirmed to PAID</span>
         </div>
       </div>
     </section>
@@ -97,9 +314,12 @@
     <!-- CONTROL PANEL & BENCHMARK CONTROLS -->
     <section class="control-panel">
       <div class="control-group left">
-        <button id="btn-run-batch" class="btn btn-primary btn-lg">
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-          Run Batch Evaluation (100 Cases)
+        <button id="btn-run-batch" class="btn btn-primary btn-lg btn-cyber">
+          <div class="btn-shine"></div>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Run Batch Evaluation (100 Cases)</span>
         </button>
 
         <div class="switch-control-wrap">
@@ -108,13 +328,22 @@
             <span class="slider"></span>
           </label>
           <div class="toggle-label-wrap">
-            <span class="toggle-title">Simulate Payment API Down (Circuit Breaker Demo)</span>
-            <span class="toggle-hint">Demonstrates guaranteed safe fallback to ESCALATE</span>
+            <span class="toggle-title">Simulate Payment API Down (Circuit Breaker)</span>
+            <span class="toggle-hint">Guarantees safe zero-risk failover to ESCALATE</span>
           </div>
         </div>
       </div>
 
       <div class="control-group right">
+        <!-- Live Quick Search -->
+        <div class="search-wrap">
+          <svg width="15" height="15" fill="none" stroke="#38bdf8" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="input-case-search" placeholder="Search case ID, order ID, scenario..." class="search-field">
+        </div>
+
         <div class="cap-control-wrap">
           <label for="input-daily-cap" class="cap-label">Daily Policy Cap (Paise):</label>
           <input type="number" id="input-daily-cap" value="50000000" step="1000000" class="input-field">
@@ -125,21 +354,40 @@
     <!-- SCENARIO FILTER TABS -->
     <section class="filter-section">
       <div class="filter-tabs" id="filter-tabs">
-        <button class="filter-pill active" data-filter="all">All Cases (100)</button>
-        <button class="filter-pill" data-filter="aligned">Aligned (40)</button>
-        <button class="filter-pill" data-filter="webhook">Webhook Delayed (15)</button>
-        <button class="filter-pill" data-filter="timeout">Client Timeout (15)</button>
-        <button class="filter-pill" data-filter="double">Double Submit (10)</button>
-        <button class="filter-pill" data-filter="soft">Soft Decline (10)</button>
-        <button class="filter-pill" data-filter="hard">Hard Decline (5)</button>
-        <button class="filter-pill" data-filter="ambiguous">Ambiguous / API Down (5)</button>
+        <button class="filter-pill active" data-filter="all">
+          <span class="pill-dot"></span>All Cases <span class="pill-count">(100)</span>
+        </button>
+        <button class="filter-pill" data-filter="aligned">
+          <span class="pill-dot dot-aligned"></span>Aligned <span class="pill-count">(40)</span>
+        </button>
+        <button class="filter-pill" data-filter="webhook">
+          <span class="pill-dot dot-webhook"></span>Webhook Delayed <span class="pill-count">(15)</span>
+        </button>
+        <button class="filter-pill" data-filter="timeout">
+          <span class="pill-dot dot-timeout"></span>Client Timeout <span class="pill-count">(15)</span>
+        </button>
+        <button class="filter-pill" data-filter="double">
+          <span class="pill-dot dot-double"></span>Double Submit <span class="pill-count">(10)</span>
+        </button>
+        <button class="filter-pill" data-filter="soft">
+          <span class="pill-dot dot-soft"></span>Soft Decline <span class="pill-count">(10)</span>
+        </button>
+        <button class="filter-pill" data-filter="hard">
+          <span class="pill-dot dot-hard"></span>Hard Decline <span class="pill-count">(5)</span>
+        </button>
+        <button class="filter-pill" data-filter="ambiguous">
+          <span class="pill-dot dot-ambiguous"></span>Ambiguous / API Down <span class="pill-count">(5)</span>
+        </button>
       </div>
     </section>
 
-    <!-- CASE EXPLORER TABLE -->
+    <!-- CASE EXPLORER DATA MATRIX -->
     <section class="table-section">
       <div class="table-header">
-        <h3>Synthetic Case Explorer & Audit Stream</h3>
+        <div class="table-title-wrap">
+          <div class="radar-dot"></div>
+          <h3>Synthetic Case Explorer & Real-Time Stream</h3>
+        </div>
         <span class="case-counter" id="case-counter">Showing 100 cases</span>
       </div>
 
@@ -155,124 +403,225 @@
               <th>Diagnosis State</th>
               <th>Action Taken</th>
               <th>₹ Recovered</th>
-              <th>Actions</th>
+              <th>Inspection</th>
             </tr>
           </thead>
           <tbody id="cases-tbody">
-            <!-- Populated dynamically via app.js -->
             <tr>
-              <td colspan="9" class="loading-cell">Loading cases...</td>
+              <td colspan="9" class="loading-cell">
+                <div class="loader-spinner"></div>
+                <span>Scanning payment rails and resolving benchmark cases...</span>
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- AUDIT PERSISTENCE DRAWER / SECTION -->
+    <!-- PERSISTENT SQLITE AUDIT LOG STREAM -->
     <section class="audit-stream-section">
       <div class="section-title-row">
-        <h3>SQLite Persistent Audit Trail (Latest 10 Rows)</h3>
-        <button id="btn-refresh-audits" class="btn btn-sm btn-secondary">Refresh Logs</button>
+        <div class="audit-header-left">
+          <div class="terminal-icon">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="4 17 10 11 4 5"></polyline>
+              <line x1="12" y1="19" x2="20" y2="19"></line>
+            </svg>
+          </div>
+          <h3>SQLite Persistent Audit Trail (Latest 10 Recorded Rows)</h3>
+        </div>
+        <button id="btn-refresh-audits" class="btn btn-sm btn-secondary">
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M23 4v6h-6M1 20v-6h6"></path>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          Refresh Logs
+        </button>
       </div>
       <div class="audit-log-list" id="audit-log-list">
-        <!-- Populated via SQLite -->
+        <!-- Dynamic SQLite rows populated via app.js -->
       </div>
     </section>
   </div>
 
-  <!-- CASE DETAILS & AI EXPLAINER MODAL -->
+  <!-- CASE DETAILS & AI EXPLAINER MODAL (TABBED CYBER TERMINAL) -->
   <div class="modal-backdrop" id="case-modal" style="display: none;">
     <div class="modal-dialog">
       <div class="modal-header">
         <div class="modal-title-wrap">
-          <span class="badge" id="modal-case-badge">CASE_ID</span>
+          <span class="badge case-badge" id="modal-case-badge">CASE_ID</span>
           <h2 id="modal-title">Case Diagnostic & AI Explanation</h2>
         </div>
-        <button class="modal-close-btn" id="modal-close">&times;</button>
+        <button class="modal-close-btn" id="modal-close" aria-label="Close dialog">&times;</button>
       </div>
 
       <div class="modal-body">
         <!-- Diagnostic Summary Banner -->
         <div class="diagnostic-banner" id="modal-banner">
           <div class="banner-state">
-            <span class="label">Observed State:</span>
+            <span class="label">Observed State</span>
             <span class="val" id="modal-observed-state">GHOST_SUCCESS</span>
           </div>
           <div class="banner-action">
-            <span class="label">Action Executed:</span>
+            <span class="label">Action Executed</span>
             <span class="val" id="modal-action-taken">CONFIRM_ORDER</span>
           </div>
           <div class="banner-recovered">
-            <span class="label">Recovered:</span>
+            <span class="label">Revenue Protected</span>
             <span class="val highlight" id="modal-recovered-val">₹1,499.00</span>
           </div>
         </div>
 
-        <!-- AI Explainability Section -->
-        <div class="ai-explainer-card">
-          <div class="card-header">
-            <div class="card-title">
-              <svg width="18" height="18" fill="none" stroke="#3395FF" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"></path></svg>
-              <span>AI Root-Cause Diagnosis & Customer Messaging</span>
-            </div>
-            <span class="source-tag" id="modal-ai-source">Engine Powered</span>
-          </div>
+        <!-- Modal Navigation Tabs -->
+        <div class="modal-tabs">
+          <button class="modal-tab-btn active" data-tab="tab-ai">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-6h2zm0-8h-2V7h2z"></path>
+            </svg>
+            AI Root-Cause & Summary
+          </button>
+          <button class="modal-tab-btn" data-tab="tab-msgs">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            Bilingual Messaging (EN / Hinglish)
+          </button>
+          <button class="modal-tab-btn" data-tab="tab-json">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            Raw Payloads (Order vs Rail)
+          </button>
+        </div>
 
-          <div class="ai-content-block">
-            <div class="ai-field">
-              <label>Root Cause Analysis</label>
-              <p id="modal-ai-root-cause" class="ai-text">Analyzing root cause...</p>
-            </div>
-            
-            <div class="ai-field">
-              <label>Merchant Operations Summary</label>
-              <p id="modal-ai-merchant-summary" class="ai-text">Generating summary...</p>
+        <!-- TAB 1: AI Root Cause & Operations -->
+        <div class="tab-pane active" id="tab-ai">
+          <div class="ai-explainer-card">
+            <div class="card-header">
+              <div class="card-title">
+                <span class="ai-sparkle">✦</span>
+                <span>Root-Cause Diagnostic Analysis</span>
+              </div>
+              <span class="source-tag" id="modal-ai-source">Engine Powered</span>
             </div>
 
-            <div class="ai-messages-grid">
-              <div class="message-box">
-                <div class="msg-header">
-                  <span>Customer Notification (English)</span>
-                  <button class="btn-copy" onclick="copyText('modal-ai-customer-en')">Copy</button>
-                </div>
-                <div class="msg-bubble" id="modal-ai-customer-en">Drafting message...</div>
+            <div class="ai-content-block">
+              <div class="ai-field">
+                <label>Technical Root Cause</label>
+                <p id="modal-ai-root-cause" class="ai-text">Analyzing root cause...</p>
+              </div>
+              
+              <div class="ai-field">
+                <label>Merchant Operations & Finance Summary</label>
+                <p id="modal-ai-merchant-summary" class="ai-text">Generating executive summary...</p>
               </div>
 
-              <div class="message-box hinglish-box">
-                <div class="msg-header">
-                  <span>Customer Notification (Hinglish / India)</span>
-                  <button class="btn-copy" onclick="copyText('modal-ai-customer-hinglish')">Copy</button>
-                </div>
-                <div class="msg-bubble" id="modal-ai-customer-hinglish">Drafting Hinglish message...</div>
+              <div class="safety-badge" id="modal-ai-safety">
+                ✓ Guaranteed bounded resolution: Action strictly verified against Razorpay ground-truth rails.
               </div>
-            </div>
-
-            <div class="safety-badge" id="modal-ai-safety">
-              ✓ Guaranteed bounded resolution: Action strictly verified against Razorpay ground-truth rails.
             </div>
           </div>
         </div>
 
-        <!-- Raw Signals Comparison (Order vs Payment) -->
-        <div class="signals-comparison-grid">
-          <div class="signal-card">
-            <h4>Merchant Order Entity</h4>
-            <pre><code id="modal-order-json">{}</code></pre>
+        <!-- TAB 2: Bilingual Customer Messaging -->
+        <div class="tab-pane" id="tab-msgs">
+          <div class="ai-messages-grid">
+            <div class="message-box">
+              <div class="msg-header">
+                <span class="msg-lang">English Notification</span>
+                <button class="btn-copy" id="btn-copy-en" onclick="copyText('modal-ai-customer-en', this)">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <div class="msg-bubble" id="modal-ai-customer-en">Drafting message...</div>
+            </div>
+
+            <div class="message-box hinglish-box">
+              <div class="msg-header">
+                <span class="msg-lang">Hinglish Notification (India D2C)</span>
+                <button class="btn-copy" id="btn-copy-hi" onclick="copyText('modal-ai-customer-hinglish', this)">
+                  <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span>Copy</span>
+                </button>
+              </div>
+              <div class="msg-bubble" id="modal-ai-customer-hinglish">Drafting Hinglish message...</div>
+            </div>
           </div>
-          <div class="signal-card">
-            <h4>Razorpay Payment Rail Entity</h4>
-            <pre><code id="modal-payment-json">{}</code></pre>
+        </div>
+
+        <!-- TAB 3: Raw Signals Payload Comparison -->
+        <div class="tab-pane" id="tab-json">
+          <div class="signals-comparison-grid">
+            <div class="signal-card">
+              <div class="signal-header">
+                <h4>Merchant Order Entity</h4>
+                <span class="entity-type">Internal DB</span>
+              </div>
+              <pre><code id="modal-order-json">{}</code></pre>
+            </div>
+            <div class="signal-card">
+              <div class="signal-header">
+                <h4>Razorpay Payment Rail Entity</h4>
+                <span class="entity-type">Gateway Ground-Truth</span>
+              </div>
+              <pre><code id="modal-payment-json">{}</code></pre>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="modal-footer">
-        <button id="modal-resolve-btn" class="btn btn-primary">Re-Run Single Resolution</button>
+        <button id="modal-resolve-btn" class="btn btn-primary btn-glow">Execute Single Case Resolution</button>
         <button id="modal-dismiss-btn" class="btn btn-secondary">Close</button>
       </div>
     </div>
   </div>
 
-  <script src="/static/app.js"></script>
+  <!-- LIVE WEBHOOK SIMULATOR SANDBOX MODAL -->
+  <div class="modal-backdrop" id="webhook-modal" style="display: none;">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="badge" style="background:rgba(0,240,255,0.15);color:#00f0ff;border:1px solid rgba(0,240,255,0.3);">SANDBOX</span>
+          <h2>Live Razorpay Webhook Ingestion Sandbox</h2>
+        </div>
+        <button class="modal-close-btn" id="webhook-modal-close">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="subtitle" style="margin-bottom:12px;">Simulate live webhook event delivery to <code>POST /webhooks/razorpay</code> with HMAC-SHA256 signature verification.</p>
+        
+        <div class="webhook-presets">
+          <label style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;">Select Event Template:</label>
+          <div style="display:flex;gap:8px;margin-top:6px;">
+            <button class="btn btn-sm btn-secondary" onclick="loadWebhookTemplate('payment.captured')">payment.captured (₹1,499)</button>
+            <button class="btn btn-sm btn-secondary" onclick="loadWebhookTemplate('payment.failed')">payment.failed (Bank Error)</button>
+          </div>
+        </div>
+
+        <div style="margin-top:14px;">
+          <label style="font-size:11px;font-weight:700;color:var(--text-muted);text-transform:uppercase;">Webhook Payload JSON:</label>
+          <textarea id="webhook-payload-input" class="webhook-textarea"></textarea>
+        </div>
+
+        <div id="webhook-response-box" class="webhook-response" style="display:none;">
+          <h4 style="font-size:12px;color:var(--cyan-neon);margin-bottom:6px;">⚡ Webhook Ingestion Outcome:</h4>
+          <pre><code id="webhook-response-json"></code></pre>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-send-webhook" class="btn btn-primary btn-glow" onclick="sendSimulatedWebhook()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          Send Live Webhook
+        </button>
+        <button class="btn btn-secondary" onclick="closeWebhookModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js?v=5.0"></script>
 </body>
 </html>
